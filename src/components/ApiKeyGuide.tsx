@@ -27,16 +27,16 @@ const ApiKeyGuide = () => {
 
   const steps = [
     {
-      title: "B1: Truy Crawl Console",
+      title: "B1: Truy Cập Console",
       description: "Vào trang web chính xác",
       content: "https://console.groq.com/",
-      action: "Truy Crawl"
+      action: "Truy Cập"
     },
     {
-      title: "B2: Tài Kho",
+      title: "B2: Tài Khoản",
       description: "Sign up/Sign in",
       content: "Dùng Google, GitHub, email",
-      action: "Tài Kho"
+      action: "Tài Khoản"
     },
     {
       title: "B3: Keys",
@@ -52,7 +52,7 @@ const ApiKeyGuide = () => {
     },
     {
       title: "B5: Copy Key",
-      description: "CHI 1 LÂN!",
+      description: "CHỈ 1 LẦN!",
       content: "gsk_xxxxxxxxxxxxx...",
       action: "Copy"
     }
@@ -61,24 +61,24 @@ const ApiKeyGuide = () => {
   const commonErrors = [
     {
       error: "Invalid API Key",
-      solution: "Kiêm tra copy full key (có gsk_)"
+      solution: "Kiểm tra copy full key (có gsk_)"
     },
     {
       error: "Rate Limit", 
-      solution: "Chua 1-2 phút (limit 30 req/phút)"
+      solution: "Chờ 1-2 phút (limit 30 req/phút)"
     },
     {
       error: "Key Expired",
-      solution: "Tao key moi"
+      solution: "Tạo key mới"
     }
   ];
 
   const securityTips = [
-    "KHÔNG chia se key",
-    "KHÔNG commit vao git", 
-    "KHÔNG dua vao frontend",
+    "KHÔNG chia sẻ key",
+    "KHÔNG commit vào git", 
+    "KHÔNG đưa vào frontend",
     "Dùng .env file",
-    "Thay key nghi leak"
+    "Thay key nếu nghi leak"
   ];
 
   return (
@@ -91,10 +91,10 @@ const ApiKeyGuide = () => {
             </div>
           </div>
           <CardTitle className="text-2xl font-heading font-bold text-foreground">
-            Huong Dan Lay Groq API Key
+            Hướng Dẫn Lấy Groq API Key
           </CardTitle>
           <p className="text-muted-foreground">
-            De AI cham bai tu dong trong Prompt Pal
+            Để AI chấm bài tự động trong Prompt Pal
           </p>
         </CardHeader>
       </Card>
@@ -103,7 +103,7 @@ const ApiKeyGuide = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <CheckCircle className="w-5 h-5 text-green-500" />
-            5 Buoc Nhanh
+            5 Bước Nhanh
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -118,7 +118,7 @@ const ApiKeyGuide = () => {
                   <p className="text-sm text-muted-foreground">{step.description}</p>
                   <p className="text-xs text-ocean mt-1">{step.content}</p>
                 </div>
-                {step.action === "Truy Crawl" && (
+                {step.action === "Truy Cập" && (
                   <Button
                     size="sm"
                     variant="outline"
@@ -126,7 +126,7 @@ const ApiKeyGuide = () => {
                     className="flex items-center gap-2"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Mo Console
+                    Mở Console
                   </Button>
                 )}
                 {step.action === "Keys" && (
@@ -137,7 +137,7 @@ const ApiKeyGuide = () => {
                     className="flex items-center gap-2"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Mo Keys
+                    Mở Keys
                   </Button>
                 )}
               </div>
@@ -151,7 +151,7 @@ const ApiKeyGuide = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <AlertCircle className="w-5 h-5 text-yellow-500" />
-              Loi Thuong Gap
+              Lỗi Thường Gặp
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -174,7 +174,7 @@ const ApiKeyGuide = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-red-500" />
-            Bao Mat
+            Bảo Mật
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -192,16 +192,16 @@ const ApiKeyGuide = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Chi Tiet Tham Khao</CardTitle>
+          <CardTitle>Chi Tiết Tham Khảo</CardTitle>
         </CardHeader>
         <CardContent>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="format">
-              <AccordionTrigger>Dinh Dang API Key</AccordionTrigger>
+              <AccordionTrigger>Định Dạng API Key</AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">
-                    Key co dinh dang: <code className="bg-muted px-2 py-1 rounded text-xs">gsk_xxxxxxxxxxxxx...</code>
+                    Key có định dạng: <code className="bg-muted px-2 py-1 rounded text-xs">gsk_xxxxxxxxxxxxx...</code>
                   </p>
                   <div className="flex items-center gap-2">
                     <Button
@@ -211,7 +211,7 @@ const ApiKeyGuide = () => {
                       className="flex items-center gap-2"
                     >
                       {showApiKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                      {showApiKey ? "An" : "Hien"} Vi Du
+                      {showApiKey ? "Ẩn" : "Hiện"} Ví Dụ
                     </Button>
                     {showApiKey && (
                       <Button
@@ -239,7 +239,7 @@ const ApiKeyGuide = () => {
               <AccordionContent>
                 <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">
-                    Cho developer, tao file <code className="bg-muted px-2 py-1 rounded text-xs">.env</code>:
+                    Cho developer, tạo file <code className="bg-muted px-2 py-1 rounded text-xs">.env</code>:
                   </p>
                   <div className="p-3 bg-muted rounded-lg">
                     <code className="text-xs">VITE_GROQ_API_KEY=gsk_your_key_here</code>
@@ -252,7 +252,7 @@ const ApiKeyGuide = () => {
             </AccordionItem>
 
             <AccordionItem value="support">
-              <AccordionTrigger>Ho Tro</AccordionTrigger>
+              <AccordionTrigger>Hỗ Trợ</AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
@@ -282,13 +282,13 @@ const ApiKeyGuide = () => {
       <Card className="gradient-card">
         <CardContent className="text-center p-6">
           <p className="text-sm text-muted-foreground">
-            Sau khi co API key, quay lai Prompt Pal va paste vao o nhap key
+            Sau khi có API key, quay lại Prompt Pal và dán vào ô nhập key
           </p>
           <Button 
             className="mt-4 gradient-button"
             onClick={() => window.location.reload()}
           >
-            Da Co Key - Bat Dau Su Dung
+            Đã Có Key - Bắt Đầu Sử Dụng
           </Button>
         </CardContent>
       </Card>

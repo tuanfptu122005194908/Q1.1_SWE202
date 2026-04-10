@@ -1,98 +1,105 @@
-# Huong Dan Lay Groq API Key
+# Hướng Dẫn Lấy Groq API Key
 
-## Tong Quan
-Groq API key de ket noi voi AI model cua Groq de chamm bai tu dong trong ung dung Prompt Pal.
+## Tổng Quan
 
-## Buoc 1: Dang Ky Tai Khoan Groq
+Groq API key để kết nối với AI model của Groq để chấm bài tự động trong ứng dụng Prompt Pal.
 
-1. Truy cap: https://console.groq.com/
-2. Click "Sign up" neu chua co tai khoan
-3. Dang ky bang:
+## Bước 1: Đăng Ký Tài Khoản Groq
+
+1. Truy cập: https://console.groq.com/
+2. Click "Sign up" nếu chưa có tài khoản
+3. Đăng ký bằng:
    - Google Account
-   - GitHub Account  
-   - Hoac email thuong
+   - GitHub Account
+   - Hoặc email thường
 
-## Buoc 2: Dang Nhap Va Xac Minh
+## Bước 2: Đăng Nhập Và Xác Minh
 
-1. Dang nhap vao: https://console.groq.com/
-2. Neu can, xac minh email (check inbox va click link xac minh)
-3. Hoan thanh profile neu yeu cau
+1. Đăng nhập vào: https://console.groq.com/
+2. Nếu cần, xác minh email (check inbox và click link xác minh)
+3. Hoàn thành profile nếu yêu cầu
 
-## Buoc 3: Tao API Key
+## Bước 3: Tạo API Key
 
-### Cach 1: Qua Console (De nhat)
+### Cách 1: Qua Console (Dễ nhất)
 
-1. Sau khi dang nhap, click menu "Keys" o ben trai
-   - Hoac truy cap truc tiep: https://console.groq.com/keys
-2. Click nut "Create Key" (mau xanh)
-3. Dat ten cho key (vi: "Prompt Pal Key")
-4. Chon permissions:
-   - Mac dinh la "All" - giu nguyen
+1. Sau khi đăng nhập, click menu "Keys" ở bên trái
+   - Hoặc truy cập trực tiếp: https://console.groq.com/keys
+2. Click nút "Create Key" (màu xanh)
+3. Đặt tên cho key (vị dụ: "Prompt Pal Key")
+4. Chọn permissions:
+   - Mặc định là "All" - giữ nguyên
 5. Click "Create Key"
 
-### Cach 2: Qua API Keys Section
+### Cách 2: Qua API Keys Section
 
 1. Trong dashboard, click "API Keys"
 2. Click "Generate new key"
-3. Dat ten va confirm
+3. Đặt tên và confirm
 
-## Buoc 4: Luu Tru API Key
+## Bước 4: Lưu Trữ API Key
 
-**QUAN TRONG:** API key chi hien len 1 LAN duy nhat!
+**QUAN TRỌNG:** API key chỉ hiện lên 1 LẦN duy nhất!
 
-1. Copy key co dinh dang: `gsk_xxxxxxxxxxxxx...`
-2. Luu vao:
+1. Copy key có định dạng: `gsk_xxxxxxxxxxxxx...`
+2. Lưu vào:
    - Notepad/Text file
    - Password manager
-   - Hoac dung ngay trong app
+   - Hoặc dùng ngay trong app
 
-## Buoc 5: Su Dung Trong Prompt Pal
+## Bước 5: Sử Dụng Trong Prompt Pal
 
-1. Mo ung dung Prompt Pal
-2. Khi hoi API key, paste key vao
-3. Click "Xac nhan & Bat dau"
+1. Mở ứng dụng Prompt Pal
+2. Khi hỏi API key, paste key vào
+3. Click "Xác nhận & Bắt đầu"
 
-## Cac Loi Thuong Gap
+## Các Lỗi Thường Gặp
 
 ### "Invalid API Key"
-- Kiem tra lai key co copy day du khong
-- Dam bao co "gsk_" o dau
+
+- Kiểm tra lại key có copy đầy đủ không
+- Đảm bảo có "gsk\_" ở đầu
 
 ### "Rate Limit Exceeded"
-- Groq co limit mien phi (thuong 30 requests/phut)
-- Cho 1-2 phut thu lai
+
+- Groq có limit miễn phí (thường 30 requests/phút)
+- Chờ 1-2 phút thử lại
 
 ### "Key Expired"
-- Tao key moi neu can
-- Xoa key cu trong security settings
 
-## Quan Ly API Key
+- Tạo key mới nếu cần
+- Xóa key cũ trong security settings
 
-### Xem Key Da Tao
-1. Vao: https://console.groq.com/keys
-2. Co the xem ten key da tao
-3. Khong the xem gia tri key (chi co ten)
+## Quản Lý API Key
 
-### Xoa Key
+### Xem Key Đã Tạo
+
+1. Vào: https://console.groq.com/keys
+2. Có thể xem tên key đã tạo
+3. Không thể xem giá trị key (chỉ có tên)
+
+### Xóa Key
+
 1. Trong Keys section
-2. Click delete icon ben canh key
+2. Click delete icon bên cạnh key
 3. Confirm deletion
 
-### Tao Key Moi
-- Co the tao nhieu key cho cac project khac nhau
-- De quan ly va bao mat
+### Tạo Key Mới
+
+- Có thể tạo nhiều key cho các project khác nhau
+- Để quản lý và bảo mật
 
 ## Security Tips
 
-1. **KHONG CHIA SE** API key voi bat ky ai
-2. **KHONG COMMIT** key vao git/public repository
-3. **KHONG DUA** key vao frontend code (chi dung trong environment variables)
-4. **THAY DOI** key neu nghi bi leak
-5. **SU DUNG** key moi cho moi production environment
+1. **KHÔNG CHIA SẺ** API key với bất kỳ ai
+2. **KHÔNG COMMIT** key vào git/public repository
+3. **KHÔNG ĐƯA** key vào frontend code (chỉ dùng trong environment variables)
+4. **THAY ĐỔI** key nếu nghi bị leak
+5. **SỬ DỤNG** key mới cho mỗi production environment
 
 ## Environment Variables Setup (Cho Developer)
 
-Neu ban la developer, setup environment variable:
+Nếu bạn là developer, setup environment variable:
 
 ```
 # .env file
@@ -100,6 +107,7 @@ VITE_GROQ_API_KEY=gsk_your_actual_key_here
 ```
 
 Trong code:
+
 ```javascript
 const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 ```
@@ -112,4 +120,4 @@ const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
 ---
 
-**Lu y:** API key Groq mien phi co limit, neu can dung cao cap hay xem pricing plans.
+**Lưu ý:** API key Groq miễn phí có limit, nếu cần dùng cao cấp hãy xem pricing plans.
