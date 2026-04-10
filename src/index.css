@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 270 30% 97%;
+    --foreground: 250 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 250 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 250 30% 15%;
+
+    --primary: 330 60% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 40% 75%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 270 20% 93%;
+    --muted-foreground: 250 15% 45%;
+
+    --accent: 170 50% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 20% 88%;
+    --input: 270 20% 88%;
+    --ring: 330 60% 65%;
+
+    --radius: 1rem;
+
+    --sakura: 330 60% 75%;
+    --lavender: 270 50% 72%;
+    --ocean: 200 70% 55%;
+    --mint: 160 45% 65%;
+    --peach: 20 80% 78%;
+
+    --gradient-main: linear-gradient(135deg, hsl(330 60% 75%), hsl(270 50% 72%), hsl(200 70% 55%));
+    --gradient-card: linear-gradient(135deg, hsl(330 60% 75% / 0.08), hsl(270 50% 72% / 0.08), hsl(200 70% 55% / 0.05));
+    --gradient-button: linear-gradient(135deg, hsl(330 60% 65%), hsl(270 50% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(160 45% 65%), hsl(200 70% 55%));
+    --glass-bg: hsl(0 0% 100% / 0.6);
+    --glass-border: hsl(0 0% 100% / 0.4);
+    --glass-shadow: 0 8px 32px hsl(270 50% 72% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .gradient-text {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: var(--gradient-main);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-button {
+    background: var(--gradient-button);
+  }
+
+  .gradient-accent-bg {
+    background: var(--gradient-accent);
+  }
+
+  .sakura-float {
+    animation: sakuraFloat 6s ease-in-out infinite;
+  }
+
+  @keyframes sakuraFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(330 60% 75% / 0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
