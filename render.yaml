@@ -1,0 +1,35 @@
+services:
+  # Prompt Pal React App
+  - type: web
+    name: prompt-pal-app
+    env: node
+    repo: https://github.com/tuanfptu122005194908/Q1.1_SWE202.git
+    rootDir: ./
+    buildCommand: npm run build
+    startCommand: npm run preview
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+    plan: starter
+    region: oregon
+    branch: main
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - src/**
+        - public/**
+        - package*.json
+        - vite.config.ts
+        - tailwind.config.ts
+        - tsconfig*.json
+        - postcss.config.js
+    headers:
+      - path: /assets/*
+        headers:
+          Cache-Control: public, max-age=31536000, immutable
+      - path: /*
+        headers:
+          X-Frame-Options: DENY
+          X-Content-Type-Options: nosniff
+          Referrer-Policy: strict-origin-when-cross-origin
