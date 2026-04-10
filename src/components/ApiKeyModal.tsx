@@ -18,8 +18,9 @@ const ApiKeyModal = ({ onSubmit }: ApiKeyModalProps) => {
             <KeyRound className="w-6 h-6 text-primary-foreground" />
           </div>
           <div>
-            <h2 className="text-xl font-heading font-bold text-foreground">Nhập Groq API Key</h2>
-            <p className="text-sm text-muted-foreground">Cần để AI chấm bài cho bạn</p>
+            <h2 className="text-xl font-heading font-bold text-foreground">Nháp Groq API Key</h2>
+            <p className="text-sm text-muted-foreground">Cán ñ AI chám bài cho ban</p>
+            <p className="text-xs text-green-600">Key së duwc luw lai ñ lan sau khong can nhap lai</p>
           </div>
         </div>
 
